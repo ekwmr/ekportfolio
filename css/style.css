@@ -412,52 +412,55 @@ footer small {
 ===================================*/
 
 /*＝＝＝並び替えボタンのCSS*/
-.sort-btn{
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	padding:50px 20px;
+.sort-btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
 }
 
-.sort-btn li{
-	background:#ffe207;
+.sort-btn li {
+  background: #ffe207;
   border-bottom: 2px dashed #e73820;
-list-style:none;
-	cursor: pointer;
-	padding: 10px;
-	margin:0 10px;
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px;
 }
 
-.sort-btn li.active{/*ボタンに現在地＝activeというクラス名がついたら背景色を変更*/
-	background:#e73820;
-  color: #fff;	
+.sort-btn li.active {
+  /*ボタンに現在地＝activeというクラス名がついたら背景色を変更*/
+  background: #e73820;
+  color: #fff;
 }
 
 /*横幅が480px以下になった際の指定*/
 @media only screen and (max-width: 480px) {
-.sort-btn{
-	justify-content: space-between;
-}
-	
-.sort-btn li{
-	width:48%;
-	margin:0 0 10px 0;
-	text-align:center;
-	}	
+  .sort-btn {
+    justify-content: space-between;
+  }
+
+  .sort-btn li {
+    width: 48%;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
 }
 
 /*＝＝＝Muuriのレイアウトのための調整 */
 .grid {
-  position: relative;/*並び替えの基準点を指定*/
+  position: relative;
+  /*並び替えの基準点を指定*/
 }
 
 /*各画像の横幅などの設定*/
 .item {
   display: block;
   position: absolute;
-  width: 33%;/*横並びで3つ表示*/
+  width: 33%;
+  /*横並びで3つ表示*/
   z-index: 1;
-list-style:none;
+  list-style: none;
 }
 
 /*内側のボックスの高さが崩れないように維持*/
@@ -469,24 +472,94 @@ list-style:none;
 }
 
 /*画像の横幅を100%にしてレスポンシブ化*/
-.grid img{
-	width:100%;
-	height:auto;
-	vertical-align: bottom;/*画像の下にできる余白を削除*/
+.grid img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  /*画像の下にできる余白を削除*/
 }
 
 /*横幅が768px以下になった際の指定*/
 @media only screen and (max-width: 768px) {
-.item {
-  width: 49.5%;/*横並びで2つ表示*/
-}
+  .item {
+    width: 49.5%;
+    /*横並びで2つ表示*/
+  }
 }
 
 /*＝＝＝fancyboxサムネイル背景と画像選択時の枠線の指定*/
 .fancybox-thumbs {
-    background: transparent!important;
+  background: transparent !important;
 }
 
 .fancybox-thumbs__list a:before {
-    border: 6px solid #FA999B;
+  border: 6px solid #FA999B;
+}
+
+
+/* ============================
+メディアクエリー
+============================ */
+@media screen and (max-width: 415px) {
+  .wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .logo-imgbox {
+    width: 70%;
+    height: 100vh;
+    margin: 25vh auto;
+  }
+
+  .menu-btn img {
+    width: 15vw;
+    height: auto;
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    /* 最前面に */
+    z-index: 10;
+  }
+
+  .copy {
+    font-size: 2rem;
+    color: #fff;
+    background-color: #e73820;
+    writing-mode: vertical-rl;
+    padding: 2vh;
+    display: inline-block;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    border: 5px solid #e73820;
+    background-color: #fff;
+    color: #e73820;
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: 10vw;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .p__imgbox {
+    padding-left: 3vw;
+    margin: auto 0;
+  }
+
+  .p__skil {
+    padding: 5vw 0;
+  }
+
+  .gerk {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vw;
+  }
+
+  .gerk img {
+    width: 60%;
+  }
 }
