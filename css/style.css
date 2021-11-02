@@ -1,0 +1,492 @@
+@charset "utf-8";
+
+/* ============== 共通設定ここから ============== */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #e73820;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: .7;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  vertical-align: middle;
+  text-align: inherit;
+  font: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body {
+  vertical-align: bottom;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  padding-bottom: 10vw;
+}
+
+
+.flex {
+  display: flex;
+}
+
+/* 画面全囲み */
+.border-wrapper {
+  width: 100%;
+  height: 100vh;
+  border: 15px solid #e73820;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* ======== */
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#top {
+  height: 100vh;
+  width: 100%;
+}
+
+/* ハンバーガーメニュー */
+/* .menu-btn {
+  padding: 5vw;
+  display: flex;
+  justify-content: flex-end;
+} */
+
+.menu-btn img {
+  width: 5vw;
+  height: auto;
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  /* 最前面に */
+  z-index: 10;
+}
+
+.menu {
+  /* メニューの位置マイナス指定で画面外に */
+  position: fixed;
+  right: -70%;
+  width: 70%;
+  height: 100vh;
+  margin-left: auto;
+  /* メニューを縦に */
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #e73820;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: .3s;
+  z-index: 5;
+}
+
+.menu-list {
+  width: 100%;
+  height: 100%;
+  /* メニューテキスト位置をリスト内中心に */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list img {
+  width: 30%;
+}
+
+.menu-list a {
+  display: flex;
+  justify-content: center;
+}
+
+.menu.open {
+  right: 0;
+}
+
+/* ハンバーガーメニュー ここまで */
+
+.logo-imgbox {
+  width: 50%;
+  height: 100vh;
+  margin: 25vh auto;
+}
+
+.copy {
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #e73820;
+  writing-mode: vertical-rl;
+  padding: 2vh;
+  display: inline-block;
+  /* width: 10vh; */
+}
+
+.subcopy {
+  font-size: 1.5rem;
+  background-color: #ffe207;
+  border-bottom: 2px dashed #e73820;
+  margin-bottom: 1vw;
+}
+
+.subcopy2 {
+  display: inline-block;
+}
+
+.subcopy span {
+  font-size: 2rem;
+}
+
+.subcopybox {
+  margin-top: 5vw;
+  margin-left: 3vw;
+}
+
+.btn {
+  font-size: 1.2rem;
+  border: 5px solid #e73820;
+  background-color: #fff;
+  color: #e73820;
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+  height: 5vw;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.5;
+}
+
+.btnbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vw;
+  padding-bottom: 10vw;
+}
+
+.nanameline {
+  background-image: url(../images/shasen.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* ============== 共通設定ここまで ============== */
+
+
+
+/* ======== プロフィール ======== */
+#profile {
+  padding-bottom: 0;
+}
+
+.p__title {
+  margin-bottom: 5vw;
+}
+
+.p__imgbox {
+  padding-left: 3vw;
+  margin: 0 auto;
+}
+
+.p__textbox {
+  margin-bottom: 1vw;
+}
+
+.p__skil {
+  margin-bottom: 1vw;
+}
+
+.s30p {
+  width: 30%;
+  background-color: #e73820;
+  margin-bottom: .7rem;
+  color: #fff;
+  padding: .3rem;
+}
+
+.s70p {
+  width: 70%;
+  background-color: #e73820;
+  margin-bottom: .7rem;
+  color: #fff;
+  padding: .3rem;
+}
+
+.s80p {
+  width: 70%;
+  background-color: #e73820;
+  margin-bottom: .7rem;
+  color: #fff;
+  padding: .3rem;
+}
+
+.s90p {
+  width: 90%;
+  background-color: #e73820;
+  margin-bottom: .7rem;
+  color: #fff;
+  padding: .3rem;
+}
+
+.s100p {
+  width: 100%;
+  background-color: #e73820;
+  margin-bottom: .7rem;
+  color: #fff;
+  padding: .3rem;
+}
+
+.skilmater span {
+  color: #ffe207;
+  font-weight: bold;
+}
+
+.gerk {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+/* ======== ワークス ======== */
+.w__title {
+  align-items: flex-start;
+  margin-bottom: 5vw;
+}
+
+#works {
+  padding-bottom: 0;
+  /* padding-top: 10vw; */
+}
+
+/* スライダーのためのcss */
+.slider img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+  margin: 0 10px;
+  /*スライド左右の余白調整*/
+}
+
+
+/* ======== お問い合わせ ======== */
+#contact {
+  padding-bottom: 0;
+}
+
+.c__title {
+  margin-bottom: 5vw;
+}
+
+label {
+  margin-bottom: 0.5vw;
+  font-size: 1.2rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: solid 3px #e73820;
+  padding: 5px;
+  width: 60%;
+  margin-bottom: 1.5vw;
+}
+
+textarea {
+  border: solid 3px #e73820;
+  padding: 5px;
+  width: 100%;
+  height: 10vw;
+}
+
+/* ======== footer  ========*/
+footer {
+  background-color: #e73820;
+  padding: 2vw;
+  margin-top: 2vw;
+}
+
+.footerbox {
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+}
+
+.f__imgbox img {
+  width: 20vw;
+  margin-top: 3vw;
+}
+
+.f__textbox {
+  margin-left: 5vw;
+  margin-top: 5vw;
+}
+
+.f__textbox ul {
+  padding-left: 1vw;
+  border-left: solid 5px #7CBBE7;
+}
+
+.f__textbox li {
+  margin-bottom: 1vw;
+}
+
+.f__textbox a {
+  color: #ffe207;
+}
+
+.f__textbox span {
+  font-size: 0.7rem;
+}
+
+footer small {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 1vw 0;
+}
+
+
+/* =================================================
+ワークス
+========================================= */
+
+.wrapper_w {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.works_h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #e73820;
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 1vw;
+}
+
+
+/*==================================
+ギャラリーのためのcss
+===================================*/
+
+/*＝＝＝並び替えボタンのCSS*/
+.sort-btn{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding:50px 20px;
+}
+
+.sort-btn li{
+	background:#ffe207;
+  border-bottom: 2px dashed #e73820;
+list-style:none;
+	cursor: pointer;
+	padding: 10px;
+	margin:0 10px;
+}
+
+.sort-btn li.active{/*ボタンに現在地＝activeというクラス名がついたら背景色を変更*/
+	background:#e73820;
+  color: #fff;	
+}
+
+/*横幅が480px以下になった際の指定*/
+@media only screen and (max-width: 480px) {
+.sort-btn{
+	justify-content: space-between;
+}
+	
+.sort-btn li{
+	width:48%;
+	margin:0 0 10px 0;
+	text-align:center;
+	}	
+}
+
+/*＝＝＝Muuriのレイアウトのための調整 */
+.grid {
+  position: relative;/*並び替えの基準点を指定*/
+}
+
+/*各画像の横幅などの設定*/
+.item {
+  display: block;
+  position: absolute;
+  width: 33%;/*横並びで3つ表示*/
+  z-index: 1;
+list-style:none;
+}
+
+/*内側のボックスの高さが崩れないように維持*/
+.item-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+/*画像の横幅を100%にしてレスポンシブ化*/
+.grid img{
+	width:100%;
+	height:auto;
+	vertical-align: bottom;/*画像の下にできる余白を削除*/
+}
+
+/*横幅が768px以下になった際の指定*/
+@media only screen and (max-width: 768px) {
+.item {
+  width: 49.5%;/*横並びで2つ表示*/
+}
+}
+
+/*＝＝＝fancyboxサムネイル背景と画像選択時の枠線の指定*/
+.fancybox-thumbs {
+    background: transparent!important;
+}
+
+.fancybox-thumbs__list a:before {
+    border: 6px solid #FA999B;
+}
